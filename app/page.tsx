@@ -1,7 +1,5 @@
-"use client"
+import { UserDashboard } from "@/components/user/user-dashboard"
 
-import App from "../app_v0modified"
-
-export default function SyntheticV0PageForDeployment() {
-  return <App />
+export default function Home() {
+  return <UserDashboard />
 }

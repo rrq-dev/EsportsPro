@@ -1,20 +1,21 @@
-import type { Metadata } from 'next'
-import './globals.css'
-
-export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
-}
+import type React from "react"
+import { SidebarProvider } from "@/components/ui/sidebar"
+import "./globals.css"
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="id">
+      <body className="min-h-screen bg-slate-50 font-sans antialiased">
+        <SidebarProvider>{children}</SidebarProvider>
+      </body>
     </html>
   )
 }
+
+export const metadata = {
+      generator: 'v0.dev'
+    };
